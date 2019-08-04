@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import Colors from "../styling/styles"
 
+// todo: replace menu logo with call button
 const LinkStyle = {
   textDecoration: "none",
   color: Colors.MainBlack,

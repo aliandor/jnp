@@ -28,21 +28,22 @@ class Navigation extends Component {
     return (
       <Header>
         <NavBar>
-          <SiteLogo to="/">
-            <img src={Logo} alt="smiley face logo" />
-          </SiteLogo>
-          <SiteTitle to="/">
-            <h1>{this.props.siteTitle}</h1>
-          </SiteTitle>
-          <Btn onClick={this.handleClick}>
-            <MenuBtn
-              src={BtnImg}
-              alt="Hamburger by Vector Studio from the Noun Project"
-            />
-          </Btn>
+          <TopNav>
+            <SiteLogo to="/">
+              <img src={Logo} alt="smiley face logo" />
+            </SiteLogo>
+            <SiteTitle to="/">
+              <h1>{this.props.siteTitle}</h1>
+            </SiteTitle>
+            <Btn onClick={this.handleClick}>
+              <MenuBtn
+                src={BtnImg}
+                alt="Hamburger by Vector Studio from the Noun Project"
+              />
+            </Btn>
+          </TopNav>
           <CallBtn href="tel:818-248-4422">
-            <p style={{ fontSize: 14 }}>Call Us Today</p>
-            <Number>818-248-4422</Number>
+            <Number>Call Us: 818-248-4422</Number>
           </CallBtn>
         </NavBar>
         {toggleMobileMenu}
@@ -57,16 +58,22 @@ const Header = styled.header`
   width: 100vw;
   height: 60px;
 `
+const TopNav = styled.div`
+  width: 100vw;
+  height: 40px;
+  display: flex;
+  padding: 0 1rem;
+  align-items: center;
+`
 
 const SiteLogo = styled(Link)`
   text-decoration: none;
   color: ${Colors.MainBlack};
-  /* align-self: flex-end; */
-  /* object-fit: fit; */
-  /* width: 24px; */
-  grid-column: logo;
+  align-self: center;
   img {
-    width: 32px;
+    transform: translateY(2px);
+
+    width: 24px;
     @media (min-width: 700px) {
       transform: translateY(3px);
     }
@@ -76,11 +83,13 @@ const SiteLogo = styled(Link)`
 const SiteTitle = styled(Link)`
   text-decoration: none;
   color: ${Colors.MainBlack};
-  grid-column: title;
-  align-self: center;
-  /* transform: translateY(5px); */
+  grid-column: 2;
+  justify-self: center;
+  width: 100%;
+  background: #fff;
   h1 {
     font-size: 6vw;
+    text-align: center;
     font-family: "sans-serif";
     @media (min-width: 700px) {
       font-size: 2.4rem;
@@ -118,22 +127,25 @@ const NavBar = styled.div`
 `
 
 const Btn = styled.button`
-  grid-column: btn;
   background: none;
   border: none;
-  align-self: center;
-  justify-self: end;
   &:focus {
     outline-color: ${Colors.MainRed};
   }
 `
 const MenuBtn = styled.img`
   width: 24px;
-  object-fit: cover;
+  height: 20px;
+  /* border: 1px solid; */
+  object-fit: contain;
   position: relative;
+  transform: translateY(2px);
 `
 
 const CallBtn = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100vw;
   height: 50px;
   grid-column: 1/-1;
