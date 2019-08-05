@@ -18,8 +18,7 @@ const Menu = () => (
       <Link style={LinkStyle} to="/copperrepipepage/">
         <MenuItem style={{ color: Colors.MainRed }}>
           <CTA style={{ textAlign: "center" }}>
-            Copper Repipe
-            <br /> For Le<Green>$$</Green>
+            Copper Repipe For Le<Green>$$</Green>
           </CTA>
         </MenuItem>
       </Link>
@@ -32,14 +31,14 @@ const Menu = () => (
       <Link style={LinkStyle} to="/aboutpage/">
         <MenuItem>About Us</MenuItem>
       </Link>
-      <Link style={LinkStyle} to="/">
+      {/* <Link style={LinkStyle} to="/">
         <MenuItem>
           <img
             src="https://res.cloudinary.com/dnsdvh13n/image/upload/v1539197672/johnNelsonPlumbing/icons/logo.png"
             alt="john nelson plumbing smiley face logo"
           />
         </MenuItem>
-      </Link>
+      </Link> */}
     </MenuPage>
   </Fragment>
 )
@@ -49,7 +48,7 @@ export default Menu
 const CardDropShadow = "0px 4px 4px rgba(0, 0, 0, 0.25)"
 
 const MenuPage = styled.nav`
-  border: 1px solid ${Colors.MainRed};
+  /* border: 1px solid ${Colors.MainRed}; */
   background: #fff;
   /* box-sizing: border-box; */
   position: fixed;
@@ -57,13 +56,15 @@ const MenuPage = styled.nav`
   left: 0;
   right: 0;
   z-index: 2;
-  height: calc(100% - 80px);
-  max-height: 300px;
+  height: calc(100vh - 80px);
   width: 100vw;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 50px;
-  grid-template-rows: repeat(3, 100px);
+  grid-template-columns: 1fr;
+  /* grid-template-rows: 50px; */
+  grid-template-rows: repeat(5, 1fr);
+  > :nth-child(odd) {
+    background: #e9e9e9;
+  }
   @media (min-width: 699px) {
     border: none;
     box-shadow: ${CardDropShadow};
@@ -92,7 +93,7 @@ const CTA = styled.p`
 
 const MenuItem = styled.li`
   list-style: none;
-  border: 1px solid ${Colors.MainRed};
+  /* border: 1px solid ${Colors.MainRed}; */
   width: 100%;
   height: 100%;
   font-size: 1.2rem;
@@ -102,13 +103,17 @@ const MenuItem = styled.li`
   align-items: center;
   z-index: 10;
   font-family: sans-serif;
+
+  img {
+    width: 24px;
+  }
   &:hover {
     color: ${Colors.MainYellow};
   }
   @media (min-width: 699px) {
     border: none;
     img {
-      width: 32px;
+      width: 24px;
       display: none;
     }
   }
