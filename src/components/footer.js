@@ -64,7 +64,10 @@ const Foot = styled.footer`
 const SiteName = styled.h2`
   font-size: 1.5rem;
   color: rgb(250, 250, 250, 0.9);
-  /* color: ${Colors.MainRed}; */
+  @media (width: 320px) {
+    /* iphone 5 */
+    font-size: 1.35rem;
+  }
 `
 
 const Info = styled.div`
