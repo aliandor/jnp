@@ -45,10 +45,9 @@ const Footer = ({ siteTitle }) => (
 export default Footer
 
 const Foot = styled.footer`
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   background: #505050;
   width: 100vw;
-  height: 200px;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -91,5 +90,9 @@ const Legal = styled.div`
   text-align: right;
   width: 100%;
   color: white;
-  padding-right: 2px;
+  padding: 50px 0 10px 0;
+  p {
+    transform: translateX(5px) translateY(15px);
+  }
+  /* padding-right: 2px; */
 `

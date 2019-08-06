@@ -1,96 +1,69 @@
-import React from 'react'
-import styled from 'styled-components'
-import Colors from '../components/styling/styles'
-import Layout from '../components/layout'
+import React from "react"
+import styled from "styled-components"
+import Colors from "../components/styling/styles"
+import Layout from "../components/layout"
 
 const aboutpage = () => (
   <Layout>
     <Wrapper>
-    <div>
-      <h1>About Us</h1>
-      <h3>Trusted & Recommended Since 1986</h3>
-      <h3>Copper Repipe Specialist</h3>  
-    </div>
-    <main>
-      <p>We use only our own highly skilled plumbers and our project manager can provide extensive knowledge of each and every project being performed. Customer service and satisfaction is #1 priority and is never overlooked.</p>
-      <p>John Nelson Plumbing has been your trusted plumber for over 25 years because we give:</p>
-      <li>Prompt, Professional Reliable Service</li>    
-      <li>Upfront Pricing</li>    
-      <li>No Overtime Charges</li>    
-      <li>All Work 100% Guaranteed</li>    
-      <li>Locally Owned and Operated</li>    
-      <li>Full Service Plumber</li>    
-      <li>We want to be your plumbers for life!</li>    
-    </main>
-    <section>
-      <h2>Company Profile</h2>
-      <p>
-        All Work - 100% Guaranteed 
+      <div>
+        <h1>About Us</h1>
+        <h3>Trusted & Recommended Since 1986</h3>
+        <h3>Copper Repipe Specialist</h3>
+      </div>
+      <main>
+        <p>
+          We use only our own highly skilled plumbers and our project manager
+          can provide extensive knowledge of each and every project being
+          performed. Customer service and satisfaction is #1 priority and is
+          never overlooked.
+        </p>
+        <p>
+          John Nelson Plumbing has been your trusted plumber for over 25 years
+          because we give:
+        </p>
+        <li>Prompt, Professional Reliable Service</li>
+        <li>Upfront Pricing</li>
+        <li>No Overtime Charges</li>
+        <li>All Work 100% Guaranteed</li>
+        <li>Locally Owned and Operated</li>
+        <li>Full Service Plumber</li>
+        <li>We want to be your plumbers for life!</li>
+      </main>
+      <section>
+        <h2>Company Profile</h2>
+        <p>All Work - 100% Guaranteed</p>
         <li>- We Do It Right The First Time!</li>
-        Usually on the job within 59 minutes 
+        <p>Usually on the job within 59 minutes</p>
         <li>- We Value Your Time</li>
-        Up Front Pricing 
+        <p>Up Front Pricing</p>
         <li>- Free Written Estimate Before We Start</li>
-        No Extra or Overtime Charges 
+        <p>No Extra or Overtime Charges</p>
         <li>- Weekends, Holidays, Nights</li>
-        Prompt, Professional, Reliable Service
-      </p>
-    </section>
-    <SecondSection>
-      <h3>Experienced Plumbers</h3>
-      <li>Copper Repipe Specialists</li>
-      <li>Copper Repipe 4 LE<span>$$</span></li>
-      <li>Sewer and Drain Experts</li>
-      <li>Fully Insured</li>
-      <li>Full Service Plumbing</li>
-    </SecondSection>
+        <p>Prompt, Professional, Reliable Service</p>
+      </section>
+      <SecondSection>
+        <h3>Experienced Plumbers</h3>
+        <li>Copper Repipe Specialists</li>
+        <li>
+          Copper Repipe 4 LE<span>$$</span>
+        </li>
+        <li>Sewer and Drain Experts</li>
+        <li>Fully Insured</li>
+        <li>Full Service Plumbing</li>
+      </SecondSection>
     </Wrapper>
   </Layout>
-);
+)
 
-export default aboutpage;
-
-const Background = 'https://res.cloudinary.com/dnsdvh13n/image/upload/v1539115305/johnNelsonPlumbing/backgrounds/contact-vector.jpg';
+export default aboutpage
 
 const Wrapper = styled.div`
-  padding-left: 10px;
+  padding: 1rem;
   font-family: sans-serif;
-  color: ${Colors.MainBlack};  
-  @media(min-width: 500px) {
-    margin-top: 10px;
-    padding-left: 5%;
-    background: url(${Background});
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 200px 100%;
-  }
-  @media(min-width: 799px) {
-    margin-top: 10px;
-    padding-left: 5%;
-    background: url(${Background});
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right bottom;
-  }
-  @media(min-width: 899px) {
-    margin-top: 20px;
-    padding-left: 10%;
-    background: url(${Background});
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right bottom;
-  }
-  @media(min-width: 945px) {
-    margin-top: 50px;
-    padding-left: 15%;
-    background: url(${Background});
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right bottom;
-  }
+  color: ${Colors.MainBlack};
   div {
-    padding-top: 40px;
-    padding-bottom: 20px;
+    padding: 50px 0 20px 0;
     img {
       width: 50px;
     }
@@ -102,13 +75,13 @@ const Wrapper = styled.div`
       font-size: 0.9rem;
       font-weight: 400;
     }
-    @media(min-width: 945px) {
+    @media (min-width: 700px) {
       padding-top: 10px;
       h1 {
-        font-size: 2rem;
+        font-size: 48px;
       }
       h3 {
-        font-size: 1rem;
+        font-size: 24px;
       }
     }
   }
@@ -116,39 +89,37 @@ const Wrapper = styled.div`
   li {
     list-style: circle;
     padding: 2px;
-    @media(min-width: 945px) {
-      font-size: 1.12rem;
+    @media (min-width: 700px) {
+      padding: 4px;
+      font-size: 24px;
     }
   }
   main {
     grid-column: 1;
     padding-bottom: 10px;
-    @media(min-width: 699px) {
-      background: rgba(255, 255, 255, 0.9);
-      width: 400px;
-    }
     p {
       padding: 5px 0;
-      max-width: 400px;
     }
-    @media(min-width: 945px) {
+    @media (min-width: 700px) {
       p {
-        font-size: 1.12rem;
+        font-size: 24px;
       }
     }
   }
   section {
-    @media(min-width: 699px) {
-      background: rgba(255, 255, 255, 0.9);
-      width: 400px;
-    }
     h2 {
       color: ${Colors.MainRed};
       font-size: 1.35rem;
       padding-bottom: 10px;
+      @media (min-width: 700px) {
+        font-size: 24px;
+      }
     }
     p {
       font-weight: 600;
+      @media (min-width: 700px) {
+        font-size: 24px;
+      }
     }
     li {
       font-weight: 400;
@@ -156,13 +127,16 @@ const Wrapper = styled.div`
       padding-bottom: 10px;
     }
   }
-`;
+`
 
 const SecondSection = styled.section`
   h3 {
     color: ${Colors.MainRed};
     font-size: 1.35rem;
     padding: 10px 0;
+    @media (min-width: 700px) {
+      font-size: 24px;
+    }
   }
   li {
     padding: 0;
@@ -170,5 +144,6 @@ const SecondSection = styled.section`
   }
   span {
     color: ${Colors.MainGreen};
+    font-size: 24px;
   }
-`;
+`

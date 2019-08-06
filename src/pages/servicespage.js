@@ -40,7 +40,7 @@ const ServicesPage = () => (
 export default ServicesPage
 
 const Heading = styled.div`
-  padding: 40px 10px 10px 10px;
+  padding: 60px 1rem 2rem 1rem;
   h2 {
     font-size: 1.5rem;
     color: ${Colors.MainRed};
@@ -52,9 +52,16 @@ const Heading = styled.div`
     color: ${Colors.MainBlack};
   }
   @media (min-width: 699px) {
-    padding-top: 40px;
+    padding: 40px 1rem;
     div {
       padding-left: 10px;
+    }
+    h2 {
+      font-size: 48px;
+    }
+    p {
+      font-size: 24px;
+      max-width: 80vw;
     }
   }
 `

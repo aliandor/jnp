@@ -166,50 +166,47 @@ const SiteLabel = styled.div`
 const Title = styled.h2`
   font-size: 1.75rem;
   font-family: "sans-serif";
-  font-weight: 400;
-  color: ${Colors.MainBlack};
+  font-weight: 600;
+  color: #505050;
   position: relative;
   top: 26px;
   @media (min-width: 649px) {
     position: relative;
-    top: 26px;
+    /* top: 26px; */
+    font-size: 48px;
   }
 `
-
 //title styles end
 
 //page styles start
 
 const ContactPage = styled.div`
   width: 100vw;
-  /* max-width: 500px; */
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  padding: 30px 0 0 0;
+  padding: 60px 1rem 0 1rem;
+  @media (min-width: 700px) {
+    padding: 0px 1rem 0 1rem;
+  }
+  /* background: indianred; */
 `
 //page styles end
 
 //form styles start
 const Form = styled.form`
-  background: rgba(255, 255, 255, 0.99);
+  /* background: rgba(255, 255, 255, 0.99); */
   position: relative;
   width: 100%;
-  max-width: 360px;
+  max-width: 600px;
   height: 100%;
   top: 0px;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 10px;
-  @media (min-width: 649px) {
-    justify-content: center;
-  }
-  @media (min-width: 999px) {
-    max-width: 400px;
-    padding-bottom: 20px;
-  }
+  padding: 1rem 0;
+  justify-content: center;
 `
 
 const FormInput = styled.div`
@@ -224,9 +221,6 @@ const FormInput = styled.div`
       display: block;
     }
   }
-  /* @media (min-width: 649px) {
-    width: 90%;
-  } */
 `
 
 const FormLabel = styled.label`
@@ -251,6 +245,9 @@ const Input = styled.input`
   border-bottom: 1px solid ${Colors.MainBlack};
   &::placeholder {
     color: #444;
+    @media (min-width: 700px) {
+      font-size: 20px;
+    }
   }
   &:focus {
     border-bottom: 2px solid ${Colors.MainRed};
@@ -262,7 +259,7 @@ const Input = styled.input`
 `
 
 const FormMsg = styled.div`
-  width: 95%;
+  width: 100%;
   height: 140px;
   position: relative;
   display: flex;
@@ -276,9 +273,9 @@ const FormMsg = styled.div`
       font-family: sans-serif;
     }
   }
-  /* @media (min-width: 649px) {
-    width: 90%;
-  } */
+  @media (min-width: 320px) {
+    width: 95%;
+  }
 `
 
 const FormMsgInput = styled.textarea`
@@ -321,7 +318,7 @@ const CTA = styled.div`
 `
 
 const CallToActionBtn = styled.button`
-  height: 46px;
+  height: 50px;
   width: 100%;
 
   color: ${Colors.MainWhite};
@@ -340,42 +337,50 @@ const CallToActionBtn = styled.button`
   &:active {
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
+  @media (min-width: 700px) {
+    height: 70px;  
+  }
 `
 
 const HomeInfo = styled.div`
-  /* background: indianred; */
-  align-self: flex-start;
-  margin-left: 10px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  width: 95%;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: space-around;
-  padding: 3px 0;
-
+  padding: 0.75rem;
+  >:nth-child(odd) {
+    /* background: indianred; */
+  }
+  @media (min-width: 320px) {
+      padding: 0.5rem;
+    }
   label {
-    width: 50%;
+    width: 60%;
     font-family: sans-serif;
     color: #333;
+    align-self: flex-end;
+    justify-self: flex-end;
+    @media (min-width: 320px) {
+      font-size: 16px;
+    }
+    @media (min-width: 700px) {
+      font-size: 20px;
+    }
   }
 
   input,
   select {
-    width: 50%;
+    width: 40%;
   }
   input {
     border: none;
-    border-bottom: 1px solid ${Colors.MainBlack};
+    background: #e1e1e1;
+    /* border-bottom: 1px solid ${Colors.MainBlack}; */
     &:focus {
       outline: ${Colors.MainRed};
     }
   }
 
   select {
-    background: none;
-    /* background: ${Colors.MainRed}; */
     border: none;
-    border-bottom: 1px solid ${Colors.MainBlack};
+    background: #e1e1e1;
   }
 `

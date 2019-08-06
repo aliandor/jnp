@@ -71,9 +71,12 @@ const MenuPage = styled.nav`
     grid-template-columns: repeat(5, auto);
     grid-template-rows: 50px;
     height: 54px;
-    top: 46px;
+    top: 40px;
     right: 0;
     left: 0;
+    > :nth-child(odd) {
+      background: #fff;
+    }
   }
 `
 

@@ -113,6 +113,9 @@ const Rows = styled.div`
   p {
     color: ${Colors.MainBlack};
     width: 100%;
+    @media (min-width: 700px) {
+      font-size: 24px;
+    }
   }
 `
 const WrenchRow = styled.div`
@@ -131,5 +134,8 @@ const WrenchRow = styled.div`
     color: ${Colors.MainBlack};
     width: 100%;
     padding-left: 1rem;
+    @media (min-width: 700px) {
+      font-size: 24px;
+    }
   }
 `

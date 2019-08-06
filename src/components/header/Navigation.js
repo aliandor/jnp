@@ -57,10 +57,11 @@ export default Navigation
 const Header = styled.header`
   width: 100vw;
   height: 60px;
+  /* background: indianred; */
 `
 const TopNav = styled.div`
   width: 100vw;
-  height: 40px;
+  height: 60px;
   display: flex;
   padding: 0 1rem;
   align-items: center;
@@ -72,10 +73,9 @@ const SiteLogo = styled(Link)`
   align-self: center;
   img {
     transform: translateY(2px);
-
     width: 24px;
     @media (min-width: 700px) {
-      transform: translateY(3px);
+      width: 32px;
     }
   }
 `
@@ -140,6 +140,9 @@ const MenuBtn = styled.img`
   object-fit: contain;
   position: relative;
   transform: translateY(2px);
+  @media (min-width: 700px) {
+    width: 32px;
+  }
 `
 
 const CallBtn = styled.a`

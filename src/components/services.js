@@ -50,6 +50,12 @@ const ServiceCard = styled.div`
   background: #fafafa;
   display: grid;
   place-items: center center;
+  @media (min-width: 700px) {
+    max-width: 60vw;
+  }
+  /* @media (min-width: 1200px) {
+    max-width: 600px;
+  } */
 `
 
 const Dollar = styled.span`
@@ -58,7 +64,7 @@ const Dollar = styled.span`
   font-weight: 500;
   color: ${Colors.MainGreen};
   @media (min-width: 700px) {
-    font-size: 3.5vw;
+    font-size: 32px;
   }
 `
 
@@ -68,7 +74,7 @@ const CardTitle = styled.h3`
   font-weight: 500;
   color: ${Colors.MainBlack};
   @media (min-width: 700px) {
-    font-size: 3.5vw;
+    font-size: 32px;
   }
 `
 

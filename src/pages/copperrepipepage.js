@@ -54,9 +54,13 @@ export default copperrepipepage
 
 const Page = styled.div`
   width: 100vw;
-  padding: 52px 1rem 1rem 1rem;
+  padding: 60px 1rem 1rem 1rem;
   p {
-    font-size: 5vw;
+    font-size: 1rem;
+    @media (min-width: 700px) {
+      font-size: 24px;
+      width: 85%;
+    }
   }
   div {
     padding: 1rem 0;
@@ -64,43 +68,49 @@ const Page = styled.div`
     p {
       font-size: 0.9rem;
       @media (min-width: 700px) {
-        font-size: 2vw;
+        font-size: 18px;
       }
     }
   }
-  @media (min-width: 700px) {
-    p {
-      font-size: 3.5vw;
-      width: 86vw;
-    }
-  }
   header {
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
     h1 {
       color: ${Colors.MainRed};
       font-size: 8vw;
       @media (min-width: 320px) {
-        font-size: 7.5vw;
+        font-size: 24px;
+      }
+      @media (min-width: 700px) {
+        font-size: 48px;
       }
       span {
         color: ${Colors.MainGreen};
         font-size: 8vw;
         @media (min-width: 320px) {
-          font-size: 7.5vw;
+          font-size: 24px;
+        }
+        @media (min-width: 700px) {
+          font-size: 48px;
         }
       }
     }
     h3 {
-      color: ${Colors.MainBlack};
+      color: #333;
       font-size: 6vw;
       @media (min-width: 320px) {
-        font-size: 4.5vw;
+        font-size: 16px;
+      }
+      @media (min-width: 700px) {
+        font-size: 24px;
       }
       span {
         color: ${Colors.MainRed};
         font-size: 6vw;
         @media (min-width: 320px) {
-          font-size: 4.5vw;
+          font-size: 16px;
+        }
+        @media (min-width: 700px) {
+          font-size: 24px;
         }
       }
     }
@@ -112,10 +122,10 @@ const Page = styled.div`
     }
     li {
       list-style: circle;
-      font-size: 5vw;
+      font-size: 16px;
       padding: 0.25rem 0;
       @media (min-width: 700px) {
-        font-size: 3vw;
+        font-size: 24px;
       }
     }
   }
