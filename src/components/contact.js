@@ -73,7 +73,8 @@ const ContactPage = styled.div`
     [title] 70px
     [body] 1fr;
   @media (min-width: 700px) {
-    max-width: 60vw;
+    max-width: 50vw;
+    margin: 0 1rem;
   }
   /* @media (min-width: 1200px) {
     max-width: 600px;
@@ -123,7 +124,8 @@ const FormInput = styled.div`
   flex-flow: column nowrap;
   justify-content: space-between;
   @media (min-width: 700px) {
-    width: 60vw;
+    width: 50vw;
+    /* margin: 0 1rem; */
   }
   &:focus-within {
     label {

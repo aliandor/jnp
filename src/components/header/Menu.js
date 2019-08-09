@@ -52,18 +52,18 @@ const MenuPage = styled.nav`
   background: #fff;
   /* box-sizing: border-box; */
   position: fixed;
-  top: 80px;
+  top: 100px;
   left: 0;
   right: 0;
   z-index: 2;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 100px);
   width: 100vw;
   display: grid;
   grid-template-columns: 1fr;
   /* grid-template-rows: 50px; */
   grid-template-rows: repeat(5, 1fr);
   > :nth-child(odd) {
-    background: #e9e9e9;
+    background: #f9f9f9;
   }
   @media (min-width: 699px) {
     border: none;
@@ -106,7 +106,7 @@ const MenuItem = styled.li`
   align-items: center;
   z-index: 10;
   font-family: sans-serif;
-
+  font-weight: 600;
   img {
     width: 24px;
   }

@@ -100,8 +100,6 @@ const SiteTitle = styled(Link)`
 
 const NavBar = styled.div`
   width: 100vw;
-  /* height: 50px; */
-  /* padding: 5px 0; */
   position: fixed;
   top: 0;
   right: 0;
@@ -116,7 +114,7 @@ const NavBar = styled.div`
     [btn] auto
     [gutter-right] 1rem;
   @media (min-width: 649px) {
-    grid-template-rows: 40px;
+    grid-template-rows: 54px;
     grid-template-columns:
       [gutter-left] 16px
       [logo] 32px

@@ -49,6 +49,7 @@ const AboutUs = styled.div`
     [right-gutter] 16px;
   @media (min-width: 700px) {
     width: 65vw;
+    padding: 1rem;
   }
 `
 const Header = styled.div`
@@ -89,9 +90,9 @@ const Copy = styled.p`
     text-decoration: none;
     color: ${Colors.MainBlack};
     border-bottom: 3px solid rgba(157, 27, 76, 0.7);
-    font-size: 4.25vw;
+    font-size: 1rem;
     @media (min-width: 700px) {
-      font-size: 3vw;
+      font-size: 24px;
     }
   }
 `
